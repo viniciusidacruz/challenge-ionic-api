@@ -1,7 +1,7 @@
 {
-  "name": "pandu-moldes-api",
+  "name": "challenge-ionic-api",
   "version": "1.0.0",
-  "description": "Pandu Moldes API",
+  "description": "Challenge Ionic API",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
