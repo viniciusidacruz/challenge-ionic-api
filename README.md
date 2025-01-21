@@ -1,41 +1,59 @@
-# App
+# CRUD de Todo com Node JS e Fastify
 
-Pandu Moldes API
+## Visão Geral
 
-## RFs (Requisitos funcionais)
+Este projeto é um CRUD simples de Todo, permitindo que você adicione, liste, atualize e exclua tarefas. A aplicação foi construída utilizando Node JS com Fastify para o back-end, integrado com o banco de dados PostgreSQL.
 
-- [X] Deve ser possível se cadastrar;
-- [X] Deve ser possível logar;
-- [] Deve ser possível cadastrar um novo evento;
-- [] Deve ser possível listar apenas eventos daquele ano;
-- [] Deve ser possivel remover um evento ou todos;
-- [] Deve ser possível editar um evento;
-- [] Deve ser possível visualizar um evento;
-- [] Deve ser possível criar um novo produto no estoque;
-- [] Deve ser possível listar todos os produtos;
-- [] Deve ser possível editar um produto;
-- [] Deve ser possível remover um produto;
-- [] Deve ser possível adicionar pedidos a um evento;
-- [] Deve ser possível listar todos os pedidos;
-- [] Deve ser possível cancelar um pedido;
-- [] Deve ser possível finalizar um pedido;
+### Tecnologias Utilizadas
 
-## RNs (Regras de negócio)
+- **Banco de Dados**: PostgreSQL.
+- **Back-end**: Node JS com Fastify.
+- **Validações**: Zod.
 
-- [] O usuário deve visualizar o mesmo estoque outras plataformas como Shopee e Mercado Livre;
-- [] O usuário não deve cadastrar um evento com mesmo mês e ano;
-- [] O usuário não deve finalizar um evento com pedidos em aberto;
-- [] O usuário não deve cadastrar um novo produto com mesmo nome;
-- [] O usuário não deve cadastrar um novo pedido com mesmo nome;
+## Pré-requisitos
 
-## RNFs (Requisitos não funcionais)
+Antes de rodar o projeto, certifique-se de ter as seguintes ferramentas instaladas:
 
-- [X] A senha do usuário deve ser criptografada;
-- [X] O sistema deve possuir uma documentação de API;
-- [] O sistema deve possuir testes unitários;
-- [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
-- [] A lista de produtos deve ser ordenada por ordem alfabética;
-- [] A lista de pedidos deve ser ordenada por número do pedido;
-- [] A lista de eventos deve ser ordenada por data do evento;
-- [] Todas as listas de dados precisam estar paginadas com 20 itens por página;
-- [] O usuário deve ser identificado por um token JWT;
+1. **Node.js** - Recomenda-se usar a versão correta do Node.js, que pode ser gerenciada pelo `nvm` (Node Version Manager).
+2. **npm** - Usamos o npm para gerenciar as dependências.
+3. **Ionic CLI** - Para gerenciar a aplicação Ionic e a criação do APK.
+
+### Usando o `nvm` para garantir a versão correta do Node.js
+
+Caso ainda não tenha o `nvm` instalado, siga as instruções de instalação [aqui](https://github.com/nvm-sh/nvm).
+
+Para instalar a versão correta do Node.js para este projeto, execute os seguintes comandos:
+
+```bash
+nvm use
+```
+
+Isso irá garantir que a versão do Node.js utilizada seja compatível com a aplicação.
+
+## Como rodar a aplicação
+### Passo 1: Instale as dependências
+Primeiro, instale todas as dependências do projeto com o npm:
+
+```bash
+npm install
+```
+
+### Passo 2: Gerar as migrations
+```bash
+npx prisma migrate dev
+```
+
+### Passo 3: Inicie o servidor de desenvolvimento
+Após a instalação, inicie o servidor local para rodar a aplicação:
+
+```bash
+npm run dev
+```
+O aplicativo será executado localmente.
+
+
+## Agradecimentos
+Agradecemos pela oportunidade de trabalhar neste projeto. Esperamos que este CRUD de Todo seja útil para suas necessidades. Caso tenha dúvidas ou sugestões, sinta-se à vontade para entrar em contato!
+
+
+Link do repositório frontend: https://github.com/viniciusidacruz/challange-ionic

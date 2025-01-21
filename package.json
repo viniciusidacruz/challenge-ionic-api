@@ -4,8 +4,7 @@
   "description": "Challenge Ionic API",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "start": "node build/server.js",
-    "postinstall": "prisma generate && prisma migrate deploy",
+    "prod": "node build/server.js",
     "build": "tsup src --out-dir build"
   },
   "author": "Vinicius Italo",
