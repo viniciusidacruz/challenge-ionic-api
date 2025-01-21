@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  pandu-moldes-api-pg:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=pandum
+      - POSTGRESQL_PASSWORD=pandum
+      - POSTGRESQL_DATABASE=pandumoldesapi
