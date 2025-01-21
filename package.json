@@ -4,7 +4,8 @@
   "description": "Pandu Moldes API",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "prod": "node build/server.js",
+    "start": "node build/server.js",
+    "postinstall": "prisma generate && prisma migrate deploy",
     "build": "tsup src --out-dir build"
   },
   "author": "Vinicius Italo",
