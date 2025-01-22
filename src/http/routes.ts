@@ -8,8 +8,27 @@ import { todos } from "./controllers/todos";
 import { deleteTodo } from "./controllers/delete-todo";
 import { updateTodo } from "./controllers/update-todo";
 import { registerTodos } from "./controllers/create-todo";
+import { authenticate } from "./controllers/authenticate";
+import { authenticateBodySchema } from "@/validators/authenticate-body-schema";
 
 export async function appRoutes(app: FastifyTypedInstance) {
+  app.post(
+    "/session",
+    {
+      schema: {
+        tags: ["Authenticate"],
+        description: "Sign in a user",
+        body: authenticateBodySchema,
+        response: {
+          200: z.object({
+            id: z.string(),
+          }),
+        },
+      },
+    },
+    authenticate
+  );
+
   app.post(
     "/todos/create",
     {
